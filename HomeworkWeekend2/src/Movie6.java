@@ -24,8 +24,8 @@ public class Movie6 {
 	//Making toString method
 	public String toString() {
 		String allString= "";
-		allString=allString+"Movie Name: "+movieName+"\n";
-		allString=allString+"Year Of Release: "+yearOfRelease+"\n";
+		allString="Movie Name: "+movieName+"\n";
+		allString="Year Of Release: "+yearOfRelease+"\n";
 		allString=allString+"Movie Genre: "+genre+"\n";
 		allString=allString+"Movie Director: "+filmMaker+"\n";
 		allString=allString+"IMDB Rating: "+rating+"\n";

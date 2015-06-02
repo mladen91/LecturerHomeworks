@@ -7,7 +7,7 @@ public class Main6 {
 		Movie6 theExam = new Movie6("The Exam", 2007, "Mystery",
 				"Stuart Hazeldine", 6.9, false);
 
-		System.out.println(theExam);
+		System.out.println(theExam.toString());
 
 		Movie6 inception = new Movie6("Inception", 2010, "Mystery, Action",
 				"Christopher Nolan", 8.8, true);
