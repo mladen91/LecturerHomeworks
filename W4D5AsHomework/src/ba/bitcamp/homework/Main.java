@@ -57,7 +57,7 @@ public class Main {
 
 		// Task 10: Printing method getNumberOfSongsPerAlbum
 		int[] array = getNumberOfSongsPerAlbum(c1, albums);
-		System.out.println(Arrays.toString(array));
+		System.out.println("Number of songs per album:"+Arrays.toString(array));
 	}
 
 	/**
