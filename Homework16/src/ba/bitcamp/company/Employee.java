@@ -4,7 +4,7 @@ public class Employee {
 
 	private String personName;
 	private String gender;
-	public int monthlySalary;
+	private int monthlySalary;
 
 	// Creating a constructor for Employees
 	public Employee(String personName, String gender, int monthlySalary) {
