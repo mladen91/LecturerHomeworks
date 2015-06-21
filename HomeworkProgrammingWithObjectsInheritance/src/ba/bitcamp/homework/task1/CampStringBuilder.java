@@ -3,19 +3,14 @@ package ba.bitcamp.homework.task1;
 public class CampStringBuilder {
 
 	private char[] characters;
+	public static final int DEFAULT_SIZE = 0;
 
-	public CampStringBuilder(char[] characters) {
-		super();
-		this.characters = characters;
+	public CampStringBuilder() {
+		this.characters = new char[DEFAULT_SIZE];
 	}
 
 	/**
-	 * This method will put object o in the end of the String For example, if we
-	 * have words "try" and object word "catch" program will write trycatch.
-	 * 
-	 * @param o
-	 *            - represents parameter from class Object that comes in as
-	 *            String
+	 * Places characters in the end
 	 */
 	public void append(Object o) {
 		int charLength = characters.length;
@@ -33,9 +28,9 @@ public class CampStringBuilder {
 			temp[i] = o.toString().charAt(counter++);
 		}
 		characters = temp;
-
 	}
 
+	// Places characters at the beginning
 	public void prepend(Object o) {
 
 		int charLength = characters.length;
@@ -54,17 +49,14 @@ public class CampStringBuilder {
 			temp[i] = characters[counter++];
 		}
 		characters = temp;
-
 	}
 
 	// Print method
 	public String toString() {
 		String s = "";
-
 		for (int i = 0; i < characters.length; i++) {
 			s += characters[i];
 		}
-
 		return s;
 	}
 }

@@ -4,14 +4,11 @@ public class MainStringBuilder {
 
 	public static void main(String[] args) {
 
-		// Array of characters
-		char[] characters = {};
-
-		CampStringBuilder csb = new CampStringBuilder(characters);
+		CampStringBuilder csb = new CampStringBuilder();
 
 		// Calling method append which puts an inputed string on the end of a
 		// array.
-		csb.append(" dva");
+		csb.append("dva");
 		csb.append(" tri");
 		csb.prepend("jedan ");
 
