@@ -5,6 +5,7 @@ public class CampStringBuilder {
 	private char[] characters;
 
 	public CampStringBuilder(char[] characters) {
+		super();
 		this.characters = characters;
 	}
 
@@ -19,9 +20,7 @@ public class CampStringBuilder {
 	public void append(Object o) {
 		int charLength = characters.length;
 		int newChar = charLength;
-		for (int i = 0; i < o.toString().length(); i++) {
-			newChar++;
-		}
+		newChar += o.toString().length();
 		// Creating temp character array that will keep our letters
 		char[] temp = new char[newChar];
 		// Putting characters into temp array using loop
@@ -30,11 +29,10 @@ public class CampStringBuilder {
 		}
 		int counter = 0;
 		// Converting word that comes in as object to characters, using loop
-		for (int i = charLength; i < temp.length; i++) {
+		for (int i = characters.length; i < temp.length; i++) {
 			temp[i] = o.toString().charAt(counter++);
 		}
 		characters = temp;
-		System.out.println(characters);
 
 	}
 
@@ -42,9 +40,8 @@ public class CampStringBuilder {
 
 		int charLength = characters.length;
 		int newChar = charLength;
-		for (int i = 0; i < o.toString().length(); i++) {
-			newChar++;
-		}
+		newChar += o.toString().length();
+
 		// Creating temp character array that will keep our letters
 		char[] temp = new char[newChar];
 		// Putting letters from Object o to temp as character using loop
@@ -57,13 +54,13 @@ public class CampStringBuilder {
 			temp[i] = characters[counter++];
 		}
 		characters = temp;
-		System.out.println(characters);
 
 	}
 
 	// Print method
 	public String toString() {
 		String s = "";
+
 		for (int i = 0; i < characters.length; i++) {
 			s += characters[i];
 		}
