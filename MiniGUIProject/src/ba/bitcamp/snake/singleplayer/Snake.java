@@ -80,14 +80,6 @@ public class Snake extends JPanel {
 
 	}
 
-	public int getScore() {
-		return score;
-	}
-
-	public void setScore(int score) {
-		this.score = score;
-	}
-
 	/**
 	 * This method will call paintComponent from super class, and draw objects
 	 * from Draw method
@@ -172,7 +164,7 @@ public class Snake extends JPanel {
 		if ((snakeX[0] == foodX) && (snakeY[0] == foodY)) {
 			gameSpeed++;
 			size++;
-			setScore(score += 10);
+			score += 10;
 			generateFood();
 			if (gameSpeed == 10) {
 				t.setDelay(delay -= 1);
@@ -220,7 +212,7 @@ public class Snake extends JPanel {
 					|| snakeY[0] >= HEIGHT || snakeY[0] < 0
 					|| snakeX[0] >= WIDTH || snakeX[0] < 0) {
 				JOptionPane.showMessageDialog(null,
-						"Game Over! Your final score is: " + getScore());
+						"Game Over! Your final score is: " + score);
 				System.exit(0);
 			}
 		}

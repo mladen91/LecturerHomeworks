@@ -104,13 +104,6 @@ public class SnakeMultiplayer extends JPanel {
 
 	}
 
-	public int getScore() {
-		return score;
-	}
-
-	public void setScore(int score) {
-		this.score = score;
-	}
 
 	/**
 	 * This method will call paintComponent from super class, and draw objects
@@ -228,12 +221,12 @@ public class SnakeMultiplayer extends JPanel {
 			doubleScore++;
 			if (doubleScore == 5) {
 				size++;
-				setScore(score += 25);
+				score += 25;
 				generateFood();
 
 			} else {
 				size++;
-				setScore(score += 10);
+				score += 10;
 				generateFood();
 			}
 
