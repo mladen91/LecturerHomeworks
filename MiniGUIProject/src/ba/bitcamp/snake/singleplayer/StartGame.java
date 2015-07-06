@@ -1,4 +1,3 @@
-package ba.bitcamp.snake.singleplayer;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
@@ -7,6 +6,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import ba.bitcamp.snake.multiplayer.SnakeMultiplayer;
+import ba.bitcamp.snake.singleplayer.Snake;
 
 public class StartGame extends JFrame {
 
@@ -29,7 +29,7 @@ public class StartGame extends JFrame {
 		} else if (choice == JOptionPane.CANCEL_OPTION) {
 			System.exit(0);
 		}
-        //Creating multiplayer mode
+		// Creating multiplayer mode
 		if (isMultiPlayer) {
 			SnakeMultiplayer s1 = new SnakeMultiplayer();
 			setLayout(new BorderLayout());
@@ -39,7 +39,7 @@ public class StartGame extends JFrame {
 			setResizable(false);
 			pack();
 			setTitle("Snake - Single Player Mode");
-			//Creating single player mode
+			// Creating single player mode
 		} else if (isSinglePlayer) {
 			Snake s = new Snake();
 			setLayout(new BorderLayout());
